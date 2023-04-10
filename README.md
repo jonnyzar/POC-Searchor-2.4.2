@@ -1,11 +1,9 @@
-# POC-Searchor-2.4.2
-eval() Exploit POC for Searchor 2.4.2 and lower
+# POC-Searchor-2.4.2 Exploit
 
-vulnerability Reference: https://github.com/ArjunSharda/Searchor/commit/29d5b1f28d29d6a282a5e860d456fab2df24a16b
+* eval() Exploit POC for Searchor 2.4.2 and lower (2.4.0 as well) leading to Arbitrary Code Execution
+* vulnerability Reference: https://github.com/ArjunSharda/Searchor/commit/29d5b1f28d29d6a282a5e860d456fab2df24a16b
 
-* This is displayed for research purposes only and found during CTF
-
-Vulnerable code includes eval() methods as here
+Vulnerable code includes eval() method: 
 
 ```python
 url = eval(
